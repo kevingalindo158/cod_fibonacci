@@ -1,0 +1,29 @@
+#include<iostream>
+
+using namespace std;
+int fibonacci(int); //declaración o prototipo de la función
+int main()
+{
+    int numero;
+    cout<<"intruduce la cantidad de series fibonacci a generar"<<endl;
+    cin>>numero;
+
+    if(fibonacci(numero)) //llamada a la función
+
+        for(int i=0; i<numero; i++)
+        cout << fibonacci(i) << " ";
+
+    if(numero<0)
+        cout<<"no proceso numeros negativos"<<endl;
+
+}
+
+int fibonacci(int a)   //definición de la función
+{
+    if(a<2)
+        return 1;
+    return fibonacci(a-1) + fibonacci(a-2);
+
+    if(a<0)
+        return 0;
+}
